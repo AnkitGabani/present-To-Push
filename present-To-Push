@@ -1,0 +1,13 @@
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
+        vc.modalPresentationStyle = .fullScreen
+        let navi = UINavigationController.init(rootViewController: vc)
+        vc.navigationController?.navigationBar.isHidden = true
+        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
+
+// All Dismiss
+
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+// Other
+
+        self.dismiss(animated: true, completion: nil)
